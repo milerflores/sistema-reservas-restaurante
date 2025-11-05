@@ -1,0 +1,232 @@
+.fondo-mar-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Burbujas decorativas */
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.3),
+    rgba(181, 141, 230, 0.1)
+  );
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  top: 35%;
+  left: 10%;
+  opacity: 0.4;
+}
+.bubble:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  top: 55%;
+  left: 85%;
+  opacity: 0.3;
+}
+.bubble:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  top: 70%;
+  left: 5%;
+  opacity: 0.25;
+}
+.bubble:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  top: 45%;
+  left: 70%;
+  opacity: 0.35;
+}
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  top: 60%;
+  left: 90%;
+  opacity: 0.3;
+}
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  top: 30%;
+  left: 45%;
+  opacity: 0.28;
+}
+
+/* Contenedor de las olas */
+.waves-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Olas estáticas superpuestas */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wave1 {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,100 Q150,150 300,100 T600,100 T900,100 T1200,100 L1200,200 L0,200 Z' fill='%233d5a80' opacity='0.8'/%3E%3C/svg%3E")
+    repeat-x bottom;
+  background-size: 1200px 200px;
+  z-index: 1;
+}
+
+.wave2 {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 180' preserveAspectRatio='none'%3E%3Cpath d='M0,90 Q200,130 400,90 T800,90 T1200,90 L1200,180 L0,180 Z' fill='%2320B2AA' opacity='0.6'/%3E%3C/svg%3E")
+    repeat-x bottom;
+  background-size: 1200px 180px;
+  z-index: 2;
+}
+
+.wave3 {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 160' preserveAspectRatio='none'%3E%3Cpath d='M0,80 Q250,110 500,80 T1000,80 T1500,80 L1200,160 L0,160 Z' fill='%231E90FF' opacity='0.5'/%3E%3C/svg%3E")
+    repeat-x bottom;
+  background-size: 1200px 160px;
+  z-index: 3;
+}
+
+.wave4 {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'%3E%3Cpath d='M0,70 Q180,100 360,70 T720,70 T1080,70 T1440,70 L1200,140 L0,140 Z' fill='%23B58DE6' opacity='0.45'/%3E%3C/svg%3E")
+    repeat-x bottom;
+  background-size: 1200px 140px;
+  z-index: 4;
+}
+
+.wave5 {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 Q300,85 600,60 T1200,60 L1200,120 L0,120 Z' fill='%2300CED1' opacity='0.55'/%3E%3C/svg%3E")
+    repeat-x bottom;
+  background-size: 1200px 120px;
+  z-index: 5;
+}
+
+/* Animales marinos */
+.marine-life {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  filter: saturate(0.8) brightness(0.9);
+}
+
+.fish {
+  position: absolute;
+  opacity: 0.6;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.fish svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fish1 {
+  width: 80px;
+  height: 50px;
+  top: 40%;
+  left: 75%;
+  transform: scaleX(-1);
+}
+
+.fish2 {
+  width: 60px;
+  height: 40px;
+  top: 60%;
+  left: 15%;
+}
+
+.fish3 {
+  width: 70px;
+  height: 45px;
+  top: 75%;
+  left: 80%;
+}
+
+.starfish {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 120px;
+  left: 12%;
+  opacity: 0.5;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+.seaweed {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.4;
+}
+
+.seaweed1 {
+  left: 8%;
+  width: 40px;
+  height: 180px;
+}
+
+.seaweed2 {
+  right: 15%;
+  width: 35px;
+  height: 150px;
+}
+
+.jellyfish {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  top: 50%;
+  right: 20%;
+  opacity: 0.5;
+}
+
+.shell {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  bottom: 100px;
+  right: 10%;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .waves-container {
+    height: 250px;
+  }
+
+  .fish,
+  .jellyfish,
+  .starfish,
+  .shell {
+    transform: scale(0.7);
+  }
+
+  .seaweed {
+    display: none;
+  }
+}

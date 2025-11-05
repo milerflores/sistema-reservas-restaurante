@@ -1,0 +1,27 @@
+.logo-paginas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pez-paginas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border: solid 3.2px #b38ce3;
+  border-radius: 50%;
+}
+
+.logo-paginas p {
+  text-transform: uppercase;
+  font-family: "Coiny", system-ui;
+  font-size: 30px;
+  background: linear-gradient(to right, #ebb4ff, #b58ce6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,45 @@
+.contenedor-portada {
+  width: 400px;
+  height: 600px;
+}
+.contenedor-portada::before {
+  content: "";
+  height: 23px;
+  width: 100%;
+  background-color: rgba(102, 220, 230, 0.6);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.logo-portada {
+  width: 85px;
+  height: 85px;
+  border: solid 3px #b58de6;
+  border-radius: 50%;
+  background-color: #24436d;
+}
+.titulo-portada h1 {
+  font-family: "Coiny", system-ui;
+  text-transform: uppercase;
+}
+.descripcion-portada {
+  width: 340px;
+  border: solid 2px rgba(196, 67, 98, 50%);
+  border-radius: 17px;
+  background-color: rgba(181, 141, 230, 0.1);
+  padding: 20px 40px;
+}
+
+.boton-portada {
+  background-color: #b58de6;
+  border: none;
+  text-transform: uppercase;
+  /* font-family: "Coiny", system-ui; */
+  padding: 20px 60px;
+  width: 340px;
+  font-weight: bold;
+  font-size: 23px;
+  color: white;
+  border-radius: 17px;
+  box-shadow: 0 3px 3px rgb(0, 0, 0, 25%);
+}

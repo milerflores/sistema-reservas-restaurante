@@ -1,0 +1,79 @@
+.contenedor-progreso {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.lista-progreso {
+  --color-activo: #c44363;
+  --color-inactivo: #7e92e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.pasos-progreso {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.paso-nombre {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--color-inactivo);
+}
+.paso-icono {
+  font-size: 16px;
+}
+.paso-punto {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-inactivo);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.pasos-progreso::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 6px);
+  /* transform: translateY(-50%); */
+  left: -50%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-inactivo);
+  z-index: 0;
+}
+.pasos-progreso:first-child::before {
+  content: none;
+}
+
+.pasos-progreso.activo::before {
+  background-color: var(--color-activo);
+}
+
+@media (max-width: 700px) {
+  .paso {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paso-texto {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #0a1929 0%,
+    #1a2942 25%,
+    #1e3a5f 50%,
+    #2a4d7c 75%,
+    #3d5a80 100%
+  );
+  position: relative;
+  overflow-x: hidden;
+  font-family: "Sansation", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 100%,
+    rgba(181, 141, 230, 0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
