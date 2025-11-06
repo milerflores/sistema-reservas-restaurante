@@ -1,0 +1,237 @@
+.contenedor-hora {
+  width: 840px;
+  margin-top: 105px;
+  border-radius: 0 0 19px 19px;
+  background: #b7c9ef 100%;
+  border-top: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor-hora::before {
+  content: "";
+  height: 53px;
+  width: 100%;
+  background-color: rgba(102, 220, 230, 0.6);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.titulo-hora-bar {
+  position: relative;
+  z-index: 4;
+}
+
+.titulo-hora {
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+  font-family: "Coiny", system-ui;
+  font-size: 25px;
+  font-weight: 550;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+
+.horario-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #b58ce6;
+  border: 2px solid #c44363;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-family: "Sansation", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(168, 96, 230, 0.3);
+}
+
+.horario-item:hover {
+  background: #c9a0e8;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(168, 96, 230, 0.4);
+}
+
+.horario-item.seleccionado {
+  background: linear-gradient(180deg, #66dce6, #4bc5cf);
+  border-color: #3ab0ba;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(102, 220, 230, 0.5);
+  font-weight: 700;
+}
+
+.icono-reloj {
+  flex-shrink: 0;
+}
+
+.mensaje-error-hora {
+  color: #c44363;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  font-weight: 500;
+  font-family: "Sansation", sans-serif;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.botones-navegacion-hora {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 20px 0;
+}
+
+.boton-regresar-hora {
+  display: inline-flex;
+  font-family: "Sansation", sans-serif;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.boton-regresar-hora:hover {
+  background: rgba(181, 141, 230, 0.1);
+}
+
+.boton-siguiente-hora {
+  background-color: #b58de6;
+  border: none;
+  text-transform: uppercase;
+  padding: 12px 40px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  border-radius: 17px;
+  box-shadow: 0 3px 3px rgb(0, 0, 0, 25%);
+  cursor: pointer;
+  font-family: "Sansation", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.boton-siguiente-hora:hover {
+  background-color: #c9a0e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 30%);
+}
+
+.boton-siguiente-hora:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgb(0, 0, 0, 25%);
+}
+
+.informacion-horario {
+  background-color: rgba(179, 140, 227, 0.3);
+  margin: 0 50px 30px 50px;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.info-horario-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-family: "Sansation", sans-serif;
+  line-height: 1.4;
+  color: #000;
+}
+
+.info-horario-item p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contenedor-hora {
+    width: 95vw;
+    max-width: 95vw;
+  }
+
+  .horarios-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 30px;
+    gap: 12px;
+  }
+
+  .botones-navegacion-hora {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 30px;
+  }
+
+  .informacion-horario {
+    margin: 0 30px 25px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .horarios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .horario-item {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .titulo-hora {
+    font-size: 22px;
+  }
+
+  .botones-navegacion-hora {
+    padding: 0 20px;
+  }
+
+  .informacion-horario {
+    margin: 0 20px 20px 20px;
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .horarios-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}

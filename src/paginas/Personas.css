@@ -2,11 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  width: 630px;
-  height: 400px;
+  width: 700px;
   margin-top: 100px;
   position: relative;
+  gap: 20px;
 }
 
 .contenedor-personas::before {
@@ -16,56 +15,212 @@
   background-color: rgba(102, 220, 230, 0.6);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .titulo-personas {
   font-family: "Coiny", system-ui;
   font-size: 22px;
-  position: absolute;
-  top: 10px;
+  margin-top: 12px;
+  margin-bottom: 34px;
+  position: relative;
+  z-index: 4;
 }
 
 .personas-telefono {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  /* padding-bottom: 20px; */
 }
 
-.escoger-personas-1 {
+.escoger-personas {
+  /* flex: 1; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
+.escoger-personas-1,
+.escoger-personas-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.linea-divisoria {
+  width: 2px;
+  height: 180px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 .numeros-personas {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   background-color: #b58ce6;
   border-radius: 50%;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.contactanos-directamente {
-  background-color: rgba(179, 140, 227, 0.2);
+.numeros-personas:hover {
+  transform: scale(1.02);
 }
 
-.horario-contactanos {
-  background-color: rgba(179, 140, 227, 0.2);
+.numero-2 span {
+  display: inline-block;
 }
 
-.informacion-disponibilidad {
-  background-color: rgba(179, 140, 227, 0.3);
+.numero-2 span {
+  display: inline-block;
+}
+
+.escoger-personas-2 .numero-2 {
+  width: 110px;
+  border-radius: 25px;
+}
+
+.escoger-personas-2 .numero-1 span {
+  font-size: 25px;
+}
+
+.escoger-personas-2 .numero-4 span {
+  font-size: 24px;
 }
 
 .boton-personas {
   background-color: #b58de6;
   border: none;
   text-transform: uppercase;
-  /* font-family: "Coiny", system-ui; */
-  padding: 20px 60px;
-  width: 340px;
+  padding: 12px 40px;
+  width: 250px;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 20px;
   color: white;
   border-radius: 17px;
   box-shadow: 0 3px 3px rgb(0, 0, 0, 25%);
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.boton-personas:hover {
+  transform: scale(1.02);
+}
+.telefono-contacto {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.mas-personas {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.contactanos-directamente {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.contactanos-directamente,
+.horario-contactanos {
+  background-color: rgba(179, 140, 227, 0.2);
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+
+.contactanos-directamente p:first-child {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contactanos-telefono {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.contactanos-telefono span {
+  font-size: 11px;
+}
+.contactanos-email {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactanos-email {
+  font-size: 11px;
+}
+
+.horario-contactanos {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11px;
+  text-align: start;
+}
+
+.horario-contactanos p:first-child {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.informacion-disponibilidad {
+  background-color: rgba(179, 140, 227, 0.3);
+  width: 75%;
+  padding: 13px 70px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.numeros-personas.seleccionado {
+  background-color: #66dce6;
+}
+
+.numeros-personas.boton-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.numeros-personas {
+  transition: background-color 0.3s ease;
+}
+
+.mensaje-error-personas {
+  color: #c44363;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

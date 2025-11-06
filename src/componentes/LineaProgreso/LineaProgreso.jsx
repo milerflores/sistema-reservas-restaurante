@@ -1,8 +1,6 @@
 import "./LineaProgreso.css";
 import { Icon } from "@iconify/react";
-
 import React from "react";
-import "./LineaProgreso.css";
 
 export default function LineaProgreso({
   pasos = [],
@@ -22,11 +20,25 @@ export default function LineaProgreso({
         {pasos.map((paso, index) => {
           const esActivo = index <= pasoActual;
           const mostrarValor =
-            index < pasoActual && paso.valor && paso.valor.trim() !== "";
+            index < pasoActual &&
+            paso.valor !== null &&
+            paso.valor !== undefined &&
+            paso.valor !== "";
 
-          const textoMostrar = mostrarValor
-            ? `${paso.nombre}: ${paso.valor}`
-            : paso.nombre;
+          let textoMostrar;
+          if (mostrarValor) {
+            if (
+              paso.nombre === "Fecha" ||
+              paso.nombre === "Hora" ||
+              paso.nombre === "Experiencia"
+            ) {
+              textoMostrar = paso.valor;
+            } else {
+              textoMostrar = `${paso.nombre}: ${paso.valor}`;
+            }
+          } else {
+            textoMostrar = paso.nombre;
+          }
 
           return (
             <li
@@ -47,7 +59,6 @@ export default function LineaProgreso({
                 />
                 <span className="paso-texto">{textoMostrar}</span>
               </div>
-
               <div
                 className="paso-punto"
                 style={{
