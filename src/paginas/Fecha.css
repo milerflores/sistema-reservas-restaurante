@@ -37,7 +37,7 @@
   padding: 8px;
   text-align: center;
   font-family: "Coiny", system-ui;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 550;
   color: #000;
   letter-spacing: 0.5px;
@@ -246,69 +246,4 @@
 .nav.disabled:hover {
   color: #cccccc;
   transform: none;
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-  .calendar-title-bar,
-  .calendar-box {
-    width: 95vw;
-    max-width: 95vw;
-  }
-
-  .months-container {
-    gap: 40px;
-  }
-
-  .month-calendar {
-    min-width: 280px;
-  }
-}
-
-@media (max-width: 900px) {
-  .calendar-footer {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-  .months-container {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .month-calendar {
-    margin-bottom: 0;
-  }
-
-  .calendar-modal {
-    padding: 25px 20px 15px 20px;
-  }
-
-  .calendar-footer {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .month-calendar {
-    min-width: 260px;
-  }
-
-  .day {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
-  }
-
-  .month-name {
-    font-size: 24px;
-  }
-
-  .calendar-title {
-    font-size: 28px;
-    padding: 12px 0;
-  }
 }

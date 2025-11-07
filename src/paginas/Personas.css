@@ -22,7 +22,7 @@
 
 .titulo-personas {
   font-family: "Coiny", system-ui;
-  font-size: 22px;
+  font-size: 23px;
   margin-top: 12px;
   margin-bottom: 34px;
   position: relative;
@@ -97,19 +97,32 @@
   font-size: 24px;
 }
 
-.boton-personas {
+.seccion-siguiente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   background-color: #b58de6;
   border: none;
+
   text-transform: uppercase;
-  padding: 12px 40px;
-  width: 250px;
-  font-weight: bold;
-  font-size: 20px;
+  padding: 10px 50px;
+  width: 100%;
+  max-width: 360px;
+  font-weight: 700;
+  font-size: 21px;
   color: white;
   border-radius: 17px;
-  box-shadow: 0 3px 3px rgb(0, 0, 0, 25%);
-  margin-top: 15px;
   cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease-in-out;
+  margin-top: 10px;
+}
+
+.flecha-siguiente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boton-personas:hover {

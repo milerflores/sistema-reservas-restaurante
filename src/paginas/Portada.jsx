@@ -2,6 +2,7 @@ import PlantillaPagina from "../componentes/PlantillaPagina/PlantillaPagina";
 import FooterPagina from "../componentes/FooterPagina/FooterPagina";
 import "./Portada.css";
 import { useNavigate } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 export default function Portada() {
   const navegarPaginas = useNavigate();
@@ -31,9 +32,19 @@ export default function Portada() {
               <p>En pocos pasos, sin complicaciones y sin registros</p>
               <p>Sin vueltas, su mes lo espera</p>
             </div>
-            <button onClick={IrAPersonas} className="boton-portada">
-              Reservar Ahora
-            </button>
+            <div className="boton-continuar">
+              <div onClick={IrAPersonas} className="boton-portada">
+                Reservar Ahora
+              </div>
+              <div className="flecha-continuar">
+                <Icon
+                  icon="material-symbols:arrow-right-alt-rounded"
+                  width="40"
+                  height="40"
+                />
+              </div>
+            </div>
+
             <div className="info-datos-portada">
               <p>
                 Sus datos están seguros. Cancele o modifique sus datos hasta 2

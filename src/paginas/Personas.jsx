@@ -133,10 +133,17 @@ export default function Personas() {
                   <span>+</span>
                 </div>
               </div>
+              <div onClick={IrAFecha} className="seccion-siguiente">
+                <div className="texto-personas-siguiente">SIGUIENTE</div>
 
-              <button onClick={IrAFecha} className="boton-personas">
-                SIGUIENTE
-              </button>
+                <div className="flecha-siguiente">
+                  <Icon
+                    icon="material-symbols:arrow-right-alt-rounded"
+                    width="40"
+                    height="40"
+                  />
+                </div>
+              </div>
 
               {mostrarError && (
                 <p className="mensaje-error-personas">

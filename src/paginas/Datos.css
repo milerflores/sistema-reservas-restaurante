@@ -1,0 +1,355 @@
+.contenedor-datos {
+  display: flex;
+  margin-top: 110px;
+  gap: 90px;
+}
+.contenedor-datos-personales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  position: relative;
+  background-color: #f8f9fc;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-datos-personales::before {
+  content: "";
+  height: 53px;
+  width: 100%;
+  background-color: rgba(102, 220, 230, 0.6);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.titulo-datos-personales {
+  font-family: "Coiny", system-ui;
+  font-size: 23px;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 4;
+}
+
+.completa-datos {
+  font-family: "Coiny", system-ui;
+  font-weight: 500;
+  margin-top: 12px;
+  margin-bottom: 9px;
+}
+
+.contenedor-datos p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.botones-sociales {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+.botones-sociales button {
+  border: none;
+  padding: 10px 50px;
+  color: black;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.facebook {
+  background-color: #7e92e5;
+}
+
+.google {
+  background-color: #c44363;
+}
+
+.botones-sociales span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.facebook:hover {
+  background-color: #5f6ac7;
+}
+
+.google:hover {
+  background-color: #b32f3f;
+}
+
+.reservar-para {
+  font-size: 17px;
+  font-family: "Coiny", system-ui;
+  font-weight: 500;
+}
+
+.reservar-para {
+  margin-bottom: 5px;
+}
+
+form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fila {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: start;
+}
+
+form label {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-align: start;
+}
+
+.terminos-condiciones label {
+  margin: 0;
+}
+
+input {
+  border: 2px solid #7e92e6;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 14px;
+  outline: none;
+  width: 90%;
+  background-color: #bbc9f0;
+}
+
+#documento {
+  width: 70%;
+}
+
+input::placeholder {
+  color: #8080c0;
+}
+
+.unalinea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.regresar {
+  display: inline-block;
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.regresar:hover {
+  text-decoration: underline;
+}
+
+.datos-regresar {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.regresar-icono {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.datos-regresar p {
+  margin-bottom: 0;
+}
+
+.contenedor-politicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  position: relative;
+  background-color: #f8f9fc;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-politicas::before {
+  content: "";
+  height: 53px;
+  width: 100%;
+  background-color: rgba(102, 220, 230, 0.6);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contenedor-politicas p {
+  width: 84%;
+  font-size: 15px;
+  /* margin-bottom: 10px; */
+}
+
+p.titulo-politicas {
+  font-family: "Coiny", system-ui;
+  font-size: 23px;
+  margin-top: 12px;
+
+  position: relative;
+  z-index: 4;
+}
+
+.politicas-cancelacion {
+  font-family: "Coiny", system-ui;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: start;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.terminos-condiciones {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 12px;
+  width: 85%;
+}
+
+.seleccionar-terminos {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.seleccionar-terminos label {
+  text-align: start;
+}
+
+.switch {
+  position: relative;
+  width: 45px;
+  height: 25px;
+  background-color: #c9cbe6;
+  border-radius: 20px;
+  border: 2px solid #a6a5e4;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .switch {
+  background-color: #9b7ff6;
+}
+
+input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(18px);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.boton-finalizar {
+  width: 60%;
+  height: 45px;
+  background-color: #b58de6;
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.boton-finalizar:hover {
+  transform: scale(1.02);
+  background-color: #a07cd4;
+}
+
+.seleccionar-terminos label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.seleccionar-terminos .texto {
+  font-size: 13px;
+}
+
+.switch-error .texto {
+  color: red !important;
+  font-weight: 600;
+}
+
+/* .mensaje-error {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+  animation: aparecer 0.3s ease-out;
+} */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-error {
+  border-color: red !important;
+  background-color: #fbe7e7 !important;
+}
