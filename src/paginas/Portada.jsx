@@ -54,7 +54,7 @@ export default function Portada() {
           </div>
           <div className="portada-seccion-mapa">
             <p>Dónde ubicarnos:</p>
-            <p>Av. Francisco Bolognesi Nº 456, Miraflores:</p>
+            <p>Av. Aviación 3068, San Borja</p>
             <div className="portada-mapa">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1709175145033!2d-77.00536250489289!3d-12.100448979971926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7db83a29d79%3A0x254745943871d391!2sAv.%20Aviaci%C3%B3n%203068%2C%20San%20Borja%2015036!5e0!3m2!1sen!2spe!4v1762377749331!5m2!1sen!2spe&z=0"
